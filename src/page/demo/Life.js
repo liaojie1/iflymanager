@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Child from './child';
 import "./index.less"
 import { Button } from "antd"
+import "./antd/"
 class Life extends Component {
     constructor(props) {
         super(props);
