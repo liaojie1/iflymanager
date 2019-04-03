@@ -344,7 +344,7 @@ module.exports = function (webpackEnv) {
                     {
                       "libraryName": "antd",
                       "libraryDirectory": "es",
-                      style: true,
+                      "style": true,
                     }
                   ],
                   [
