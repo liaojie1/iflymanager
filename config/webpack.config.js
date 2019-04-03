@@ -333,11 +333,20 @@ module.exports = function (webpackEnv) {
               include: paths.appSrc,
               loader: require.resolve('babel-loader'),
               options: {
+
                 customize: require.resolve(
                   'babel-preset-react-app/webpack-overrides'
                 ),
-
+                // 插件位置
                 plugins: [
+                  [
+                    "import",
+                    {
+                      "libraryName": "antd",
+                      "libraryDirectory": "es",
+                      style: true,
+                    }
+                  ],
                   [
                     require.resolve('babel-plugin-named-asset-import'),
                     {
@@ -366,6 +375,7 @@ module.exports = function (webpackEnv) {
               options: {
                 babelrc: false,
                 configFile: false,
+
                 compact: false,
                 presets: [
                   [

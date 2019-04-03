@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Child from './child';
 import "./index.less"
-import { Button } from "antd"
-import "antd/dist/antd.css"
+import { Button, Input } from "antd"
+// import "antd/dist/antd.css"
 class Life extends Component {
     constructor(props) {
         super(props);
@@ -29,6 +29,7 @@ class Life extends Component {
         return (
             <div className="content">
                 <p>React生命周期试用</p>
+                <Input />
                 <Button onClick={this.handeleAdd}>Antd点击一下</Button>
                 <button onClick={this.handeleAdd}>点击一下</button>
                 <button onClick={this.hanleClick.bind(this)} > 点击一下</button>
